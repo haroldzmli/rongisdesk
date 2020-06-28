@@ -1,0 +1,35 @@
+手把手教程.........................
+忘掉qgis编译安装，直接下载qgis编译库和依赖库。
+
+
+第一步：下载qgis编译库和依赖库（提示，下载完毕后，要打开目录看看，里面有什么东西，其实有gdal，qt5，qgis，proj，sqlite。。。。。。）
+|OSGeo4W |http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe (32bit) or http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe (64bit)|
+step by step (友情提示，要记得安装目录，以后要一直用到，因里面是需要的lib，dll和include）
+找到qgis，然后在libs里下载。有两个版本，一种是长期支持版本和最新版本。选择其中之一就ok。
+
+
+第二步：下载安装vs2015（可以和第一步同步进行）
+Visual Studio 2015 Community Edition
+The free (as in free beer) Community installer is available under:
+> http://download.microsoft.com/download/D/2/3/D23F4D0F-BA2D-4600-8725-6CCECEA05196/vs_community_ENU.exe
+Select "Custom" install and add the following packages:
+* "Common Tools for Visual C++ 2015" under "Visual C++"
+* "Tools (1.4.1) and Windows 10 SDK (10.0.14393)" under "Universal Windows App Development Tools".
+
+第三步：安装python3
+
+第四步：安装vs2015的qt5插件
+打开vs2015的tools---->extensions and updates 点击online 然后在search框中写qt，选择qt packages 或者qt vs tools中的一个，当然
+也可以两个都选。
+重启后看到qt5 或者 qt vs tools，点击 在qt opions中设置 version=5.11.2 然后增加qt的路径。qt的路径在第一步的qt依赖库的目录中。
+本人的为：D:\OSGeo4W64\RootDirectory\apps\Qt5
+
+第五步：可以在qt中直接新建qt项目了。
+
+注意坑1：vs2015的git同步项目，需要http，而不是git。
+
+
+
+
+
+
